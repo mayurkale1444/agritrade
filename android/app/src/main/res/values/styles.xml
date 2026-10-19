@@ -1,7 +1,7 @@
 <resources>
     <!-- Base application theme (Material 3) -->
     <style name="Theme.AgriTrade" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/primary_green</color>
+        <item name="colorPrimary">@color/primary_green</item>
         <item name="colorSecondary">@color/accent_green</item>
         <item name="android:statusBarColor">@color/status_bar</item>
         <item name="android:navigationBarColor">@color/surface</item>
