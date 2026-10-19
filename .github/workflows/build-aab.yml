@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      STORE_PASSWORD: android123
-      KEY_PASSWORD: android123
-      KEY_ALIAS: upload
+      KEY_ALIAS: agritrade
+      KEY_PASSWORD: agritrade2026
+      STORE_PASSWORD: agritrade2026
 
     steps:
       - name: Checkout source
@@ -33,12 +33,12 @@ jobs:
           mkdir -p android/keystore
           keytool -genkeypair -v \
             -keystore android/keystore/agritrade-release.keystore \
-            -alias upload \
+            -alias agritrade \
             -keyalg RSA \
             -keysize 2048 \
             -validity 10000 \
-            -storepass android123 \
-            -keypass android123 \
+            -storepass agritrade2026 \
+            -keypass agritrade2026 \
             -dname "CN=AgriTrade, OU=Mobile, O=AgriTrade, L=Pune, S=Maharashtra, C=IN"
 
       - name: Ensure Gradle Wrapper exists
@@ -55,11 +55,17 @@ jobs:
       - name: Build Signed Release AAB
         working-directory: ./android
         env:
-          KEYSTORE_PATH: android/keystore/agritrade-release.keystore
-          STORE_PASSWORD: ${{ env.STORE_PASSWORD }}
-          KEY_PASSWORD: ${{ env.KEY_PASSWORD }}
-          KEY_ALIAS: ${{ env.KEY_ALIAS }}
-        run: ./gradlew bundleRelease
+          KEY_ALIAS: agritrade
+          KEY_PASSWORD: agritrade2026
+          STORE_PASSWORD: agritrade2026
+          KEYSTORE_PASSWORD: agritrade2026
+          RELEASE_STORE_PASSWORD: agritrade2026
+          RELEASE_KEY_PASSWORD: agritrade2026
+          MYAPP_RELEASE_STORE_PASSWORD: agritrade2026
+          MYAPP_RELEASE_KEY_PASSWORD: agritrade2026
+          MYAPP_UPLOAD_STORE_PASSWORD: agritrade2026
+          MYAPP_UPLOAD_KEY_PASSWORD: agritrade2026
+        run: ./gradlew bundleRelease -Pandroid.injected.signing.store.file=../android/keystore/agritrade-release.keystore -Pandroid.injected.signing.store.password=agritrade2026 -Pandroid.injected.signing.key.alias=agritrade -Pandroid.injected.signing.key.password=agritrade2026
 
       - name: Upload AAB
         uses: actions/upload-artifact@v4
