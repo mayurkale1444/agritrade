@@ -29,9 +29,17 @@ jobs:
         uses: gradle/actions/setup-gradle@v3
 
       - name: Restore Keystore from Secret
+        env:
+          KEYSTORE_B64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
         run: |
           mkdir -p android/keystore android/app
-          echo "${{ secrets.RELEASE_KEYSTORE_BASE64 }}" | certutil -decode - android/keystore/agritrade-release.keystore 2>/dev/null || echo "${{ secrets.RELEASE_KEYSTORE_BASE64 }}" | base64 -d > android/keystore/agritrade-release.keystore
+          python3 -c '
+          import base64, os
+          raw = os.environ.get("KEYSTORE_B64", "")
+          cleaned = "".join([line.strip() for line in raw.splitlines() if not line.startswith("-----")])
+          with open("android/keystore/agritrade-release.keystore", "wb") as f:
+              f.write(base64.b64decode(cleaned))
+          '
           cp android/keystore/agritrade-release.keystore android/app/agritrade-release.keystore
 
       - name: Ensure Gradle Wrapper exists
