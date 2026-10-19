@@ -13,7 +13,6 @@ jobs:
     env:
       STORE_PASSWORD: android123
       KEY_PASSWORD: android123
-      KEYSTORE_PATH: ${{ github.workspace }}/android/app/my-upload-key.jks
       KEY_ALIAS: upload
 
     steps:
@@ -31,9 +30,9 @@ jobs:
 
       - name: Create release keystore
         run: |
-          mkdir -p android/app
+          mkdir -p android/keystore
           keytool -genkeypair -v \
-            -keystore android/app/my-upload-key.jks \
+            -keystore android/keystore/agritrade-release.keystore \
             -alias upload \
             -keyalg RSA \
             -keysize 2048 \
@@ -56,7 +55,7 @@ jobs:
       - name: Build Signed Release AAB
         working-directory: ./android
         env:
-          KEYSTORE_PATH: ${{ env.KEYSTORE_PATH }}
+          KEYSTORE_PATH: android/keystore/agritrade-release.keystore
           STORE_PASSWORD: ${{ env.STORE_PASSWORD }}
           KEY_PASSWORD: ${{ env.KEY_PASSWORD }}
           KEY_ALIAS: ${{ env.KEY_ALIAS }}
@@ -73,4 +72,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: upload-keystore-backup
-          path: android/app/my-upload-key.jks
+          path: android/keystore/agritrade-release.keystore
