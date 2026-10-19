@@ -42,8 +42,16 @@ jobs:
             -keypass android123 \
             -dname "CN=AgriTrade, OU=Mobile, O=AgriTrade, L=Pune, S=Maharashtra, C=IN"
 
-      - name: Make gradlew executable
-        run: chmod +x ./android/gradlew
+      - name: Ensure Gradle Wrapper exists
+        run: |
+          if [ -d "android" ]; then
+            cd android
+          fi
+          if [ ! -f "gradlew" ]; then
+            echo "gradlew not found, generating wrapper..."
+            gradle wrapper
+          fi
+          chmod +x gradlew
 
       - name: Build Signed Release AAB
         working-directory: ./android
