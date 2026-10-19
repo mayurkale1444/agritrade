@@ -28,27 +28,11 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
-      - name: Create release keystore and export PEM
+      - name: Restore Keystore from Secret
         run: |
-          mkdir -p android/keystore
-          mkdir -p android/app
-          keytool -genkeypair -v \
-            -keystore android/keystore/agritrade-release.keystore \
-            -alias agritrade \
-            -keyalg RSA \
-            -keysize 2048 \
-            -validity 10000 \
-            -storepass agritrade2026 \
-            -keypass agritrade2026 \
-            -dname "CN=AgriTrade, OU=Mobile, O=AgriTrade, L=Pune, S=Maharashtra, C=IN"
+          mkdir -p android/keystore android/app
+          echo "${{ secrets.RELEASE_KEYSTORE_BASE64 }}" | certutil -decode - android/keystore/agritrade-release.keystore 2>/dev/null || echo "${{ secrets.RELEASE_KEYSTORE_BASE64 }}" | base64 -d > android/keystore/agritrade-release.keystore
           cp android/keystore/agritrade-release.keystore android/app/agritrade-release.keystore
-          
-          # Export the PEM certificate directly
-          keytool -export -rfc \
-            -keystore android/keystore/agritrade-release.keystore \
-            -alias agritrade \
-            -file upload_certificate.pem \
-            -storepass agritrade2026
 
       - name: Ensure Gradle Wrapper exists
         run: |
@@ -82,15 +66,3 @@ jobs:
           name: app-release
           path: android/app/build/outputs/bundle/release/*.aab
           if-no-files-found: warn
-
-      - name: Upload PEM Certificate
-        uses: actions/upload-artifact@v4
-        with:
-          name: upload-certificate-pem
-          path: upload_certificate.pem
-
-      - name: Upload Keystore Backup
-        uses: actions/upload-artifact@v4
-        with:
-          name: upload-keystore-backup
-          path: android/keystore/agritrade-release.keystore
