@@ -1,0 +1,8 @@
+<resources>
+    <color name="primary_green">#14532D</color>
+    <color name="primary_dark">#064E3B</color>
+    <color name="accent_green">#22C55E</color>
+    <color name="background">#F8FAFC</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="status_bar">#14532D</color>
+</resources>

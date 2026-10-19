@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="solBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141d2b" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="solHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#047857" />
+      <stop offset="50%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="1000" rx="24" fill="url(#solBg)" />
+  <rect x="12" y="12" width="776" height="976" rx="18" fill="none" stroke="#10b981" stroke-width="2.5" stroke-dasharray="8 4" opacity="0.6" />
+
+  <!-- Header -->
+  <rect x="36" y="36" width="728" height="110" rx="16" fill="url(#solHeader)" />
+  <text x="400" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#d1fae5" text-anchor="middle" letter-spacing="3">॥ श्री सिद्धेश्वर प्रसन्न ॥</text>
+  <text x="400" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">पाटील अनियन ट्रेडर्स (सोलापूर)</text>
+  <text x="400" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#ecfdf5" text-anchor="middle">गाळा क्र. ३२, सोलापूर कृषी उत्पन्न बाजार समिती, सोलापूर</text>
+
+  <!-- Date Bar -->
+  <rect x="36" y="160" width="728" height="60" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="56" y="196" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800" fill="#34d399">सोलापूर एपीएमसी कांदा बाजार भाव</text>
+  <text x="400" y="196" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#cbd5e1" text-anchor="middle">गुणवत्ता व आकारानुसार दर पत्रक</text>
+  <rect x="610" y="172" width="138" height="36" rx="8" fill="#b45309" />
+  <text x="679" y="195" font-family="monospace" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">२५/०९/२०२६</text>
+
+  <!-- Commodity / Unit -->
+  <g transform="translate(36, 236)">
+    <rect width="728" height="64" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="24" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#94a3b8">शेतमाल: <tspan fill="#ffffff" font-weight="900">लाल कांदा (Red Onion)</tspan></text>
+    <text x="420" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#94a3b8">आवक: <tspan fill="#fbbf24" font-weight="900">८,००० पोती</tspan></text>
+    <text x="680" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" fill="#34d399" text-anchor="end">एकक: प्रति १०० KG (क्विंटल)</text>
+  </g>
+
+  <!-- Quality Rates -->
+  <g transform="translate(36, 318)">
+    <rect width="728" height="44" rx="10" fill="#1e3a8a" />
+    <text x="24" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#ffffff">दर्जा / क्वालिटी (Grade / Variety)</text>
+    <text x="380" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#ffffff">प्रकार (Size)</text>
+    <text x="690" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="end">बाजार भाव (₹ / 100 KG)</text>
+
+    <!-- Super -->
+    <rect y="52" width="728" height="66" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="40" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" fill="#f8fafc">सुपर मोठा माल (Premium Extra Bold)</text>
+    <text x="40" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">घट्ट लाल कांदा, वजनदार लॉट</text>
+    <text x="380" y="91" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#cbd5e1">मोठा आकार</text>
+    <rect x="520" y="64" width="190" height="42" rx="8" fill="#064e3b" stroke="#059669" stroke-width="1" />
+    <text x="615" y="91" font-family="monospace" font-size="18" font-weight="900" fill="#34d399" text-anchor="middle">₹४,२०० – ₹४,६००</text>
+
+    <!-- Medium -->
+    <rect y="126" width="728" height="66" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="40" y="154" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" fill="#f8fafc">मध्यम गोल्टा (Medium Golta)</text>
+    <text x="40" y="176" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">सुका व स्वच्छ माल</text>
+    <text x="380" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#cbd5e1">मध्यम</text>
+    <rect x="520" y="138" width="190" height="42" rx="8" fill="#1e3a5f" stroke="#2563eb" stroke-width="1" />
+    <text x="615" y="165" font-family="monospace" font-size="18" font-weight="900" fill="#60a5fa" text-anchor="middle">₹३,४०० – ₹३,९००</text>
+
+    <!-- Standard -->
+    <rect y="200" width="728" height="66" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="40" y="228" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" fill="#f8fafc">गोल्टी (Standard Golti)</text>
+    <text x="40" y="250" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">नियमित व्यापार</text>
+    <text x="380" y="239" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#cbd5e1">गोल्टी</text>
+    <rect x="520" y="212" width="190" height="42" rx="8" fill="#451a03" stroke="#d97706" stroke-width="1" />
+    <text x="615" y="239" font-family="monospace" font-size="18" font-weight="900" fill="#fbbf24" text-anchor="middle">₹२,५०० – ₹३,१००</text>
+
+    <!-- Chhat -->
+    <rect y="274" width="728" height="66" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="40" y="302" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" fill="#f8fafc">छाट / चिंगळी (Average / Chingli)</text>
+    <text x="40" y="324" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">हलका किंवा ओला माल</text>
+    <text x="380" y="313" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#cbd5e1">छोटा</text>
+    <rect x="520" y="286" width="190" height="42" rx="8" fill="#3f1d24" stroke="#e11d48" stroke-width="1" />
+    <text x="615" y="313" font-family="monospace" font-size="18" font-weight="900" fill="#fb7185" text-anchor="middle">₹१,२०० – ₹२,१००</text>
+  </g>
+
+  <!-- Note -->
+  <g transform="translate(36, 700)">
+    <rect width="728" height="110" rx="14" fill="#0f172a" stroke="#0284c7" stroke-width="1.5" />
+    <text x="24" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" fill="#38bdf8">व्यापारी टीप (Trader Observation):</text>
+    <text x="24" y="68" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#cbd5e1">
+      • आवक मर्यादित असल्याने चांगल्या प्रतीच्या मालाला गिऱ्हाईक टिकून आहे.
+    </text>
+    <text x="24" y="94" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#cbd5e1">
+      • प्रतवारी करून आणलेल्या कांद्यास प्रति क्विंटल ₹३०० ते ₹४०० अधिक भाव मिळत आहे.
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <g transform="translate(36, 840)">
+    <rect width="728" height="120" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="24" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" fill="#ffffff">अहवाल कर्ते: राहुल पाटील (पाटील अनियन ट्रेडर्स)</text>
+    <text x="24" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#94a3b8">नोंदणीकृत व्यापारी • सोलापूर कृषी उत्पन्न बाजार समिती, सोलापूर, महाराष्ट्र</text>
+    <text x="24" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#f59e0b">
+      * हे दर स्थानिक व्यापाऱ्याने लिलावाच्या आधारे नोंदवले आहेत. शासकीय अधिकृत AGMARKNET पोर्टलशी संलग्न नाही.
+    </text>
+  </g>
+</svg>

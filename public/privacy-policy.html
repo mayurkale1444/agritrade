@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriTrade — Official Privacy Policy | Google Play Console Compliant</title>
+  <meta name="description" content="Official Privacy Policy, Data Safety Disclosures, and User Data Deletion Instructions for AgriTrade (in.agritrade.app) — Agricultural Mandi Intelligence & Price Comparison App.">
+  <meta name="author" content="Mayur Kale">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="AgriTrade — Official Privacy Policy">
+  <meta property="og:description" content="Data Safety Disclosures and User Data Deletion Instructions for AgriTrade (in.agritrade.app).">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --primary: #047857;
+      --primary-dark: #065f46;
+      --primary-light: #ecfdf5;
+      --primary-border: #a7f3d0;
+      --accent: #d97706;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --rose-700: #be123c;
+      --rose-50: #fff1f2;
+      --rose-200: #fecdd3;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--slate-800);
+      background-color: var(--slate-50);
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .top-navbar {
+      background-color: #ffffff;
+      border-bottom: 1px solid var(--slate-200);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 18px;
+    }
+
+    .brand-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-badges {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .lang-toggle-btn {
+      background: var(--primary-light);
+      border: 1px solid var(--primary-border);
+      color: var(--primary-dark);
+      padding: 7px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .lang-toggle-btn:hover {
+      background: #d1fae5;
+    }
+
+    .print-btn {
+      background: #ffffff;
+      border: 1px solid var(--slate-200);
+      color: var(--slate-700);
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .main-container {
+      max-width: 920px;
+      margin: 32px auto 60px;
+      padding: 0 20px;
+    }
+
+    .doc-card {
+      background: #ffffff;
+      border-radius: 24px;
+      border: 1px solid var(--slate-200);
+      box-shadow: 0 4px 24px -2px rgba(15, 23, 42, 0.05);
+      padding: 44px;
+    }
+
+    @media (max-width: 640px) {
+      .doc-card {
+        padding: 24px 18px;
+        border-radius: 16px;
+      }
+      .brand-title {
+        font-size: 17px;
+      }
+      .nav-container {
+        padding: 10px 14px;
+      }
+    }
+
+    .header-banner {
+      border-bottom: 2px solid var(--slate-100);
+      padding-bottom: 26px;
+      margin-bottom: 28px;
+    }
+
+    .app-meta-badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: 900;
+      color: var(--slate-900);
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+      padding: 14px 18px;
+      background: var(--slate-50);
+      border-radius: 12px;
+      border: 1px solid var(--slate-200);
+      font-size: 13px;
+    }
+
+    .meta-item strong {
+      color: var(--slate-900);
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 2px;
+    }
+
+    .highlight-box {
+      background-color: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      padding: 18px 22px;
+      border-radius: 0 14px 14px 0;
+      margin: 24px 0;
+    }
+
+    .highlight-box p {
+      font-size: 14.5px;
+      color: var(--primary-dark);
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin: 36px 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--slate-700);
+    }
+
+    ul, ol {
+      margin: 10px 0 20px 24px;
+      color: var(--slate-700);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .data-table-container {
+      overflow-x: auto;
+      margin: 20px 0 26px;
+      border-radius: 14px;
+      border: 1px solid var(--slate-200);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13.5px;
+    }
+
+    th {
+      background-color: #f8fafc;
+      color: var(--slate-800);
+      font-weight: 800;
+      padding: 14px 16px;
+      border-bottom: 2px solid var(--slate-200);
+    }
+
+    td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--slate-200);
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .tag-green {
+      display: inline-block;
+      background: #d1fae5;
+      color: #065f46;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 5px;
+    }
+
+    .tag-blue {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 5px;
+    }
+
+    .tag-amber {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 5px;
+    }
+
+    .deletion-box {
+      background-color: var(--rose-50);
+      border: 1px solid var(--rose-200);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 26px 0;
+    }
+
+    .deletion-box h3 {
+      color: var(--rose-700);
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .contact-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 32px;
+    }
+
+    .contact-card h4 {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 8px;
+    }
+
+    .contact-card a {
+      color: var(--primary);
+      text-decoration: underline;
+      font-weight: 700;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 12px;
+      color: var(--slate-500);
+      border-top: 1px solid var(--slate-200);
+      padding-top: 24px;
+    }
+
+    @media print {
+      .top-navbar, .lang-toggle-btn, .print-btn {
+        display: none !important;
+      }
+      body {
+        background: #ffffff;
+      }
+      .doc-card {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="top-navbar">
+    <div class="nav-container">
+      <a href="/" class="brand-group">
+        <div class="brand-icon">🌾</div>
+        <span class="brand-title">AgriTrade</span>
+      </a>
+
+      <div class="nav-badges">
+        <button type="button" class="lang-toggle-btn" id="lang-btn" onclick="toggleLanguage()">
+          मराठी मध्ये वाचा (Read in Marathi)
+        </button>
+        <button type="button" class="print-btn" onclick="window.print()">
+          Print / PDF
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <article class="doc-card">
+      
+      <!-- ENGLISH VERSION -->
+      <div id="content-en">
+        <div class="header-banner">
+          <span class="app-meta-badge">Google Play Console Data Safety Compliance</span>
+          <h1>AgriTrade Privacy Policy</h1>
+          <p style="color: var(--slate-600); font-size: 14px;">
+            Official privacy disclosures, data safety declarations, and account/data deletion procedure.
+          </p>
+          
+          <div class="meta-grid">
+            <div class="meta-item">
+              <strong>Application Name</strong>
+              AgriTrade (कृषी बाजार भाव)
+            </div>
+            <div class="meta-item">
+              <strong>Application Package ID</strong>
+              in.agritrade.app
+            </div>
+            <div class="meta-item">
+              <strong>Developer & Contact</strong>
+              Mayur Kale (mayurkale1444@gmail.com)
+            </div>
+            <div class="meta-item">
+              <strong>Effective Date</strong>
+              October 6, 2026
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <p>
+            Summary: AgriTrade is a zero-login, ad-free agricultural intelligence application designed for Indian farmers and traders. We do NOT track GPS location in the background, sell personal data, or require SMS OTP verification. Your profile configurations and bookmarks remain stored on your device.
+          </p>
+        </div>
+
+        <h2 class="section-title">1. Introduction & Overview</h2>
+        <p>
+          AgriTrade ("we", "our", or "the application") is committed to protecting the privacy and personal data of our users — including farmers, wholesale traders, commission agents (आडत), and agricultural market participants across India.
+        </p>
+        <p>
+          This Privacy Policy explains how information is handled when you use the AgriTrade mobile application (Package: <code>in.agritrade.app</code>) and related services. This policy complies with the <strong>Google Play Developer Distribution Agreement</strong>, Google Play's <strong>User Data Policy</strong>, India's <strong>Digital Personal Data Protection Act (DPDP Act, 2023)</strong>, and the <strong>Information Technology Act, 2000</strong>.
+        </p>
+
+        <h2 class="section-title">2. Google Play Console Data Safety Declarations</h2>
+        <p>
+          In accordance with Google Play's Data Safety questionnaire requirements, here is the exact classification of data handled by AgriTrade:
+        </p>
+
+        <div class="data-table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Data Category</th>
+                <th>Collected?</th>
+                <th>Shared with 3rd Parties?</th>
+                <th>Storage & Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Personal Info: Name & Age</strong></td>
+                <td><span class="tag-blue">Optional / User Input</span></td>
+                <td><span class="tag-green">NO</span></td>
+                <td>Stored locally on device to personalize the trade experience and greetings.</td>
+              </tr>
+              <tr>
+                <td><strong>Mobile Number</strong></td>
+                <td><span class="tag-blue">Local Identifier</span></td>
+                <td><span class="tag-green">NO</span></td>
+                <td>Used locally to key on-device profiles. Masked in all UI screens (e.g. <code>+91 XXXXX 43210</code>). Never shared.</td>
+              </tr>
+              <tr>
+                <td><strong>Precise Location (GPS)</strong></td>
+                <td><span class="tag-green">NO</span></td>
+                <td><span class="tag-green">NO</span></td>
+                <td>No GPS hardware location accessed. Users manually pick their state, district, and APMC mandi market.</td>
+              </tr>
+              <tr>
+                <td><strong>Financial / Payment Info</strong></td>
+                <td><span class="tag-green">NO</span></td>
+                <td><span class="tag-green">NO</span></td>
+                <td>No bank account, credit card, debit card, or UPI details are ever requested or stored.</td>
+              </tr>
+              <tr>
+                <td><strong>Contacts & Phone Book</strong></td>
+                <td><span class="tag-green">NO</span></td>
+                <td><span class="tag-green">NO</span></td>
+                <td>No access requested to the device contact list or address book.</td>
+              </tr>
+              <tr>
+                <td><strong>SMS & Call Logs</strong></td>
+                <td><span class="tag-green">NO</span></td>
+                <td><span class="tag-green">NO</span></td>
+                <td>No SMS reading or sending. Zero OTP requirement.</td>
+              </tr>
+              <tr>
+                <td><strong>Photos & Media</strong></td>
+                <td><span class="tag-amber">Optional (User Upload)</span></td>
+                <td><span class="tag-green">NO</span></td>
+                <td>Used only if a verified trader voluntarily uploads an APMC mandi auction bulletin or rate poster.</td>
+              </tr>
+              <tr>
+                <td><strong>Advertising ID (AAID) & Trackers</strong></td>
+                <td><span class="tag-green">NO</span></td>
+                <td><span class="tag-green">NO</span></td>
+                <td>The app is 100% ad-free. Zero third-party ad networks or tracking SDKs.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="section-title">3. How Your Information is Stored & Handled</h2>
+        <p>
+          AgriTrade uses an <strong>on-device storage architecture (HTML5 Local Storage)</strong> to maintain your preferences without requiring cloud registration:
+        </p>
+        <ul>
+          <li><strong>Language Preferences:</strong> Your selected app language (Marathi, Hindi, English, Tamil, or Kannada).</li>
+          <li><strong>Trader Role & Preferences:</strong> Your trade role (Trader, Farmer, Commission Agent, Wholesaler) and selected primary APMC market.</li>
+          <li><strong>Favorite Watchlist:</strong> APMC mandis and commodities you choose to track.</li>
+          <li><strong>Calculation History:</strong> Figures calculated in the Net Profit Calculator (purchase price, sale price, quantity, freight, loading/unloading, mandi cess) are stored strictly on your phone so you can reopen past trades.</li>
+        </ul>
+
+        <h2 class="section-title">4. Device Permissions Requested</h2>
+        <p>AgriTrade requests only minimal, necessary device permissions:</p>
+        <ul>
+          <li><strong>INTERNET & ACCESS_NETWORK_STATE:</strong> Required to query daily verified mandi commodity rates and arrival figures from the Government of India AGMARKNET database.</li>
+          <li><strong>READ_MEDIA_IMAGES / CAMERA (Optional):</strong> Required only if a trader chooses to take a picture of a physical mandi rate bulletin poster to extract rates. If not used, this permission is never invoked.</li>
+        </ul>
+
+        <h2 class="section-title">5. Official Government Data Sources & Disclaimers</h2>
+        <p>
+          Official daily APMC mandi modal prices, arrival volumes, and minimum/maximum rates are sourced transparently from the <strong>Directorate of Marketing & Inspection (AGMARKNET)</strong>, Ministry of Agriculture & Farmers Welfare, Government of India, through the Open Government Data (OGD) platform at <code>data.gov.in</code>.
+        </p>
+        <p>
+          <em>Disclaimer:</em> AgriTrade is an independent agricultural intelligence utility and is not an official government entity. Government data is presented as reported by respective APMC market secretaries under the National Data Sharing and Accessibility Policy (NDSAP).
+        </p>
+
+        <h2 class="section-title">6. User Rights & Complete Data Deletion (One-Tap In-App)</h2>
+        <div class="deletion-box">
+          <h3>Permanent Profile & Data Deletion Instructions</h3>
+          <p>
+            In compliance with Google Play's <strong>Account Deletion Requirement</strong>, users have complete control to wipe their data at any time without restrictions:
+          </p>
+          <ol>
+            <li>Open the AgriTrade application.</li>
+            <li>Tap on the <strong>More (सेटिंग्ज)</strong> tab in the bottom navigation bar.</li>
+            <li>Scroll to the bottom and tap <strong>Delete Profile (प्रोफाइल हटवा)</strong>.</li>
+            <li>Confirm by tapping <strong>Yes, Delete Profile & Clear Data</strong>.</li>
+          </ol>
+          <p style="margin-top: 12px; font-weight: 700; color: var(--rose-700);">
+            Result: All your stored preferences, name, age, selected APMC markets, watchlist bookmarks, and calculation history are immediately and permanently erased from the device.
+          </p>
+          <p style="margin-top: 8px; font-size: 13.5px; color: var(--slate-600);">
+            Alternatively, you may email us at <a href="mailto:mayurkale1444@gmail.com" style="color: var(--primary); font-weight: bold;">mayurkale1444@gmail.com</a> with the subject "Data Deletion Request" and we will assist you within 24 hours.
+          </p>
+        </div>
+
+        <h2 class="section-title">7. Children's Privacy (COPPA Compliance)</h2>
+        <p>
+          AgriTrade does not knowingly collect or solicit personal information from children under the age of 13 (or under 18 in applicable jurisdictions). The application is tailored for agricultural trade professionals and adult farmers. If you believe a child has provided us with personal information, please contact us and we will promptly remove it.
+        </p>
+
+        <h2 class="section-title">8. Changes to This Privacy Policy</h2>
+        <p>
+          We may update our Privacy Policy periodically to reflect app updates or regulatory changes. Any modifications will be posted directly to this URL (<code>https://ais-pre-tytrwyrv4zyyyij2jrkatb-298166499449.asia-east1.run.app/privacy-policy.html</code>) with an updated "Effective Date".
+        </p>
+
+        <h2 class="section-title">9. Developer & Grievance Contact Information</h2>
+        <div class="contact-card">
+          <h4>Developer & Publisher Contact</h4>
+          <p><strong>Developer Name:</strong> Mayur Kale</p>
+          <p><strong>Email:</strong> <a href="mailto:mayurkale1444@gmail.com">mayurkale1444@gmail.com</a></p>
+          <p><strong>App Package Name:</strong> in.agritrade.app</p>
+          <p><strong>Location:</strong> Maharashtra, India</p>
+          <p style="margin-top: 8px; font-size: 13px; color: var(--slate-500);">
+            For any queries, privacy concerns, or data deletion requests, you can contact the developer directly via email.
+          </p>
+        </div>
+      </div>
+
+      <!-- MARATHI VERSION (मराठी आवृत्ती) -->
+      <div id="content-mr" style="display: none;">
+        <div class="header-banner">
+          <span class="app-meta-badge">गुगल प्ले डेटा सुरक्षितता प्रकटीकरण</span>
+          <h1>AgriTrade अधिकृत गोपनीयता धोरण (Privacy Policy)</h1>
+          <p style="color: var(--slate-600); font-size: 14px;">
+            अधिकृत डेटा सुरक्षितता प्रकटीकरण आणि वापरकर्ता डेटा हटवण्याची सविस्तर कार्यपद्धती.
+          </p>
+          
+          <div class="meta-grid">
+            <div class="meta-item">
+              <strong>ॲप्लिकेशनचे नाव</strong>
+              AgriTrade (कृषी बाजार भाव)
+            </div>
+            <div class="meta-item">
+              <strong>ॲप पॅकेज आयडी</strong>
+              in.agritrade.app
+            </div>
+            <div class="meta-item">
+              <strong>डेव्हलपर व संपर्क</strong>
+              मयूर काळे (mayurkale1444@gmail.com)
+            </div>
+            <div class="meta-item">
+              <strong>अंमलबजावणी तारीख</strong>
+              ६ ऑक्टोबर २०२६
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <p>
+            थोडक्यात: AgriTrade हे भारतीय शेतकरी, आडते आणि व्यापाऱ्यांसाठी संपूर्ण मोफत, जाहिरातमुक्त आणि खाजगी बाजार माहिती ॲप आहे. आम्ही कोणताही GPS ट्रॅकिंग करत नाही, जाहिराती दाखवत नाही किंवा OTP ची सक्ती करत नाही. सर्व माहिती केवळ तुमच्या स्वतःच्या मोबाईलमध्ये सुरक्षित साठवली जाते.
+          </p>
+        </div>
+
+        <h2 class="section-title">१. परिचय आणि लॉगिन-मुक्त कार्यपद्धती</h2>
+        <p>
+          AgriTrade ("आम्ही", "आमचे", किंवा "ॲप") हे भारतातील शेतकरी, घाऊक व्यापारी, आडते आणि कृषी क्षेत्रातील घटकांसाठी तयार केलेले बाजार भाव आणि नफा-तोटा हिशोब ॲप आहे.
+        </p>
+        <p>
+          हे ॲप वापरण्यासाठी कोणत्याही मोबाईल नंबर, पासवर्ड किंवा SMS OTP लॉगिनची सक्ती नाही. ॲप इन्स्टॉल करताच तात्काळ वापरता येते.
+        </p>
+
+        <h2 class="section-title">२. गुगल प्ले डेटा सुरक्षितता तक्ता (Data Safety Summary)</h2>
+        <div class="data-table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>माहितीचा प्रकार</th>
+                <th>गोळा केली जाते का?</th>
+                <th>इतरांशी शेअर केली जाते का?</th>
+                <th>वापर व सुरक्षितता</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>नाव आणि वय</strong></td>
+                <td><span class="tag-blue">केवळ फोनमध्ये</span></td>
+                <td><span class="tag-green">नाही</span></td>
+                <td>वापरकर्त्याने प्रविष्ट केलेले नाव व वय केवळ फोनमध्ये सेव्ह होते.</td>
+              </tr>
+              <tr>
+                <td><strong>मोबाईल नंबर</strong></td>
+                <td><span class="tag-blue">स्थानिक ओळख</span></td>
+                <td><span class="tag-green">नाही</span></td>
+                <td>सार्वजनिक पटलावर नंबर कधीही दाखवला जात नाही (उदा. <code>+91 XXXXX 43210</code>).</td>
+              </tr>
+              <tr>
+                <td><strong>GPS / थेट लोकेशन</strong></td>
+                <td><span class="tag-green">नाही</span></td>
+                <td><span class="tag-green">नाही</span></td>
+                <td>कोणतेही GPS ट्रॅकिंग नाही. शेतकरी स्वतः त्यांचे राज्य, जिल्हा व मुख्य बाजार समिती निवडतात.</td>
+              </tr>
+              <tr>
+                <td><strong>आर्थिक माहिती</strong></td>
+                <td><span class="tag-green">नाही</span></td>
+                <td><span class="tag-green">नाही</span></td>
+                <td>बँक खाते, UPI किंवा डेबिट/क्रेडिट कार्ड माहिती कधीही मागितली जात नाही.</td>
+              </tr>
+              <tr>
+                <td><strong>जाहिराती आणि ट्रॅकर्स</strong></td>
+                <td><span class="tag-green">नाही</span></td>
+                <td><span class="tag-green">नाही</span></td>
+                <td>ॲप १००% जाहिरातमुक्त आहे. कोणत्याही जाहिरात कंपन्यांचे SDKs वापरलेले नाहीत.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="section-title">३. फोनमधील डेटा साठवणूक</h2>
+        <p>
+          वापरकर्त्याचा वेळ वाचावा म्हणून खालील माहिती केवळ फोनमधील Local Storage मध्ये साठवली जाते:
+        </p>
+        <ul>
+          <li><strong>पसंतीची भाषा:</strong> मराठी, हिंदी, इंग्रजी, तमिळ किंवा कन्नड.</li>
+          <li><strong>भूमिका व बाजार:</strong> शेतकरी, व्यापारी, आडत्या भूमिका आणि पसंतीची APMC बाजार समिती.</li>
+          <li><strong>वॉचलिस्ट:</strong> जतन केलेले आवडते शेतमाल आणि बाजार भाव.</li>
+          <li><strong>हिशोब इतिहास:</strong> नफा कॅल्क्युलेटरमधील मागील नोंदी (खरेदी, विक्री, हमाली, वाहतूक खर्च).</li>
+        </ul>
+
+        <h2 class="section-title">४. शासकीय डेटा स्रोत</h2>
+        <p>
+          अधिकृत बाजार भाव भारत सरकारच्या कृषी व शेतकरी कल्याण मंत्रालयाच्या विपणन आणि तपासणी संचालनालय (AGMARKNET, <code>data.gov.in</code>) कडून थेट प्राप्त केले जातात.
+        </p>
+
+        <h2 class="section-title">५. प्रोफाइल आणि डेटा कायमस्वरूपी हटवण्याची पद्धत (Data Deletion)</h2>
+        <div class="deletion-box">
+          <h3>डेटा डिलीट करण्याचे सोपे टप्पे</h3>
+          <p>
+            गुगल प्ले कन्सोलच्या नियमांनुसार वापरकर्त्याला कोणत्याही वेळी स्वतःचा डेटा ॲपमधून नष्ट करण्याचा पूर्ण अधिकार आहे:
+          </p>
+          <ol>
+            <li>AgriTrade ॲप उघडा.</li>
+            <li>तळाशी असलेल्या <strong>More (सेटिंग्ज)</strong> मेनूवर टॅप करा.</li>
+            <li>खाली स्क्रोल करून <strong>प्रोफाइल हटवा (Delete Profile)</strong> वर क्लिक करा.</li>
+            <li><strong>होय, प्रोफाइल हटवा</strong> निवडून खात्री करा.</li>
+          </ol>
+          <p style="margin-top: 10px; font-weight: 700; color: var(--rose-700);">
+            यामुळे फोनमधील सर्व जतन केलेल्या बाजार समित्या, पसंतीचे शेतमाल आणि हिशोबाचा डेटा कायमस्वरूपी नष्ट होतो.
+          </p>
+        </div>
+
+        <h2 class="section-title">६. डेव्हलपर संपर्क माहिती</h2>
+        <div class="contact-card">
+          <h4>AgriTrade डेव्हलपर व तक्रार निवारण</h4>
+          <p><strong>नाव:</strong> मयूर काळे (Mayur Kale)</p>
+          <p><strong>ईमेल:</strong> <a href="mailto:mayurkale1444@gmail.com">mayurkale1444@gmail.com</a></p>
+          <p><strong>ॲप पॅकेज:</strong> in.agritrade.app</p>
+          <p><strong>पत्ता / राज्य:</strong> महाराष्ट्र, भारत</p>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; 2026 AgriTrade (in.agritrade.app) &bull; Designed & Developed by Mayur Kale &bull; All Rights Reserved.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    let isMarathi = false;
+    function toggleLanguage() {
+      isMarathi = !isMarathi;
+      const enDiv = document.getElementById('content-en');
+      const mrDiv = document.getElementById('content-mr');
+      const btn = document.getElementById('lang-btn');
+      
+      if (isMarathi) {
+        enDiv.style.display = 'none';
+        mrDiv.style.display = 'block';
+        btn.textContent = 'Read in English (इंग्रजीमध्ये वाचा)';
+      } else {
+        enDiv.style.display = 'block';
+        mrDiv.style.display = 'none';
+        btn.textContent = 'मराठी मध्ये वाचा (Read in Marathi)';
+      }
+    }
+  </script>
+</body>
+</html>

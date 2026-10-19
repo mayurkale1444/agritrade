@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b45309" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Background Poster Card -->
+  <rect width="800" height="1000" rx="24" fill="url(#bgGrad)" />
+  <rect x="12" y="12" width="776" height="976" rx="18" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="8 4" opacity="0.6" />
+  <rect x="20" y="20" width="760" height="960" rx="14" fill="none" stroke="#334155" stroke-width="1.5" />
+
+  <!-- Top Decorative Header Strip -->
+  <rect x="36" y="36" width="728" height="110" rx="16" fill="url(#headerGrad)" filter="url(#shadow)" />
+  <text x="400" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#fef3c7" text-anchor="middle" letter-spacing="3">॥ श्री गणेशाय नमः ॥ श्री स्वामी समर्थ ॥</text>
+  <text x="400" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">श्री स्वामी समर्थ ट्रेडर्स (लासलगाव)</text>
+  <text x="400" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#fffbeb" text-anchor="middle">गाळा नं. १८, मुख्य कांदा मार्केट यार्ड, लासलगाव एपीएमसी, नाशिक</text>
+
+  <!-- Notice / Date Bar -->
+  <rect x="36" y="160" width="728" height="60" rx="12" fill="#1e293b" stroke="#475569" stroke-width="1" />
+  <text x="56" y="196" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800" fill="#38bdf8">दैनिक कांदा लिलाव भाव फलक</text>
+  <text x="400" y="196" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#cbd5e1" text-anchor="middle">लासलगाव कृषी उत्पन्न बाजार समिती</text>
+  <rect x="610" y="172" width="138" height="36" rx="8" fill="#0f766e" />
+  <text x="679" y="195" font-family="monospace" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">२५/०९/२०२६</text>
+
+  <!-- Commodity & Arrival Info -->
+  <g transform="translate(36, 236)">
+    <rect width="728" height="64" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="24" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#94a3b8">शेतमाल: <tspan fill="#ffffff" font-weight="900">लाल / उन्हाळी कांदा (Red Onion)</tspan></text>
+    <text x="420" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#94a3b8">एकूण आवक: <tspan fill="#34d399" font-weight="900">१४,५०० कट्टे (Bags)</tspan></text>
+    <text x="680" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" fill="#f59e0b" text-anchor="end">दर: प्रति १०० किलो (१ क्विंटल)</text>
+  </g>
+
+  <!-- Quality-Wise Rate Table -->
+  <g transform="translate(36, 318)">
+    <!-- Table Header -->
+    <rect width="728" height="44" rx="10" fill="#047857" />
+    <text x="24" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#ffffff" letter-spacing="1">कांदा प्रत / क्वालिटी (Quality / Grade)</text>
+    <text x="380" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#ffffff" letter-spacing="1">प्रकार / साईज (Size)</text>
+    <text x="690" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="end" letter-spacing="1">बाजार भाव (₹ प्रति १०० KG)</text>
+
+    <!-- Row 1: Super Extra Bold -->
+    <rect y="52" width="728" height="66" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="36" cy="85" r="10" fill="#10b981" />
+    <text x="36" y="89" font-family="monospace" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="60" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" fill="#f8fafc">सुपर एक्स्ट्रा मोठा माल (Super Bold)</text>
+    <text x="60" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">पहिला नंबर, घट्ट लाल पत्ती, एक्सपोर्ट क्वालिटी</text>
+    <text x="380" y="91" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#cbd5e1">६०mm + मोठा</text>
+    <rect x="520" y="64" width="190" height="42" rx="8" fill="#064e3b" stroke="#059669" stroke-width="1" />
+    <text x="615" y="91" font-family="monospace" font-size="18" font-weight="900" fill="#34d399" text-anchor="middle">₹४,४०० – ₹४,८००</text>
+
+    <!-- Row 2: Medium / Golta -->
+    <rect y="126" width="728" height="66" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="36" cy="159" r="10" fill="#3b82f6" />
+    <text x="36" y="163" font-family="monospace" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="60" y="154" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" fill="#f8fafc">मध्यम माल / मोठा गोल्टा (Medium)</text>
+    <text x="60" y="176" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">स्थानिक बाजारात सर्वाधिक मागणी, चांगला रंग</text>
+    <text x="380" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#cbd5e1">४५ – ५५mm</text>
+    <rect x="520" y="138" width="190" height="42" rx="8" fill="#1e3a5f" stroke="#2563eb" stroke-width="1" />
+    <text x="615" y="165" font-family="monospace" font-size="18" font-weight="900" fill="#60a5fa" text-anchor="middle">₹३,६०० – ₹४,२००</text>
+
+    <!-- Row 3: Golti / Standard -->
+    <rect y="200" width="728" height="66" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="36" cy="233" r="10" fill="#eab308" />
+    <text x="36" y="237" font-family="monospace" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="60" y="228" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" fill="#f8fafc">बारीक गोल्टी माल (Golti / Standard)</text>
+    <text x="60" y="250" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">हॉटेल्स व रिटेल वापर, गोल व साफ कांदा</text>
+    <text x="380" y="239" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#cbd5e1">३० – ४०mm</text>
+    <rect x="520" y="212" width="190" height="42" rx="8" fill="#451a03" stroke="#d97706" stroke-width="1" />
+    <text x="615" y="239" font-family="monospace" font-size="18" font-weight="900" fill="#fbbf24" text-anchor="middle">₹२,७०० – ₹३,४००</text>
+
+    <!-- Row 4: Average / Chhat -->
+    <rect y="274" width="728" height="66" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="36" cy="307" r="10" fill="#f97316" />
+    <text x="36" y="311" font-family="monospace" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="60" y="302" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" fill="#f8fafc">छाट / जोड / सरासरी (Average / Cut)</text>
+    <text x="60" y="324" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">जोड किंवा डागी, मिक्स लॉट</text>
+    <text x="380" y="313" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#cbd5e1">मिश्रित</text>
+    <rect x="520" y="286" width="190" height="42" rx="8" fill="#431407" stroke="#ea580c" stroke-width="1" />
+    <text x="615" y="313" font-family="monospace" font-size="18" font-weight="900" fill="#fb923c" text-anchor="middle">₹१,६०० – ₹२,४००</text>
+
+    <!-- Row 5: Chingli / Light -->
+    <rect y="348" width="728" height="66" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="36" cy="381" r="10" fill="#64748b" />
+    <text x="36" y="385" font-family="monospace" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="60" y="376" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" fill="#f8fafc">चिंगळी / हलका माल (Chingli / Low)</text>
+    <text x="60" y="398" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">अति बारीक, ओला किंवा हलका कांदा</text>
+    <text x="380" y="387" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#cbd5e1">२०mm खाली</text>
+    <rect x="520" y="360" width="190" height="42" rx="8" fill="#18181b" stroke="#52525b" stroke-width="1" />
+    <text x="615" y="387" font-family="monospace" font-size="18" font-weight="900" fill="#e4e4e7" text-anchor="middle">₹८०० – ₹१,४००</text>
+  </g>
+
+  <!-- Market Sentiment & Trader Remarks Box -->
+  <g transform="translate(36, 750)">
+    <rect width="728" height="110" rx="14" fill="#0f172a" stroke="#059669" stroke-width="1.5" />
+    <rect x="16" y="14" width="150" height="24" rx="6" fill="#065f46" />
+    <text x="91" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#a7f3d0" text-anchor="middle">व्यापारी बाजार टीप (NOTE)</text>
+    <text x="180" y="31" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#f59e0b">आज बाजारात चांगल्या सुक्या मालाला जोरदार उठाव राहिला.</text>
+    <text x="24" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#cbd5e1">
+      • दक्षिणेकडील राज्यांची खरेदी सुरू असून सुपर बोल्ड कांद्याला चांगला भाव मिळत आहे.
+    </text>
+    <text x="24" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#cbd5e1">
+      • शेतकऱ्यांनी प्रतवारी करून माल विक्रीस आणावा, जेणेकरून अधिक दर मिळतील.
+    </text>
+  </g>
+
+  <!-- Footer Trader Attribution & Regulatory Transparency Strip -->
+  <g transform="translate(36, 880)">
+    <rect width="728" height="84" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="24" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="900" fill="#ffffff">अहवाल कर्ते: राजेश सोळंके (स्वामी समर्थ ट्रेडर्स)</text>
+    <text x="24" y="54" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#94a3b8">नोंदणीकृत व्यापारी • लासलगाव कृषी उत्पन्न बाजार समिती, नाशिक, महाराष्ट्र</text>
+    <text x="24" y="72" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#f59e0b">
+      * सदर दर स्थानिक लिलाव व प्रतवारीनुसार आहेत. अधिकृत शासकीय AGMARKNET दर वेगळे प्रसिद्ध होतात.
+    </text>
+
+    <!-- Verified Badge -->
+    <rect x="575" y="24" width="130" height="36" rx="8" fill="#047857" />
+    <text x="640" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="900" fill="#ffffff" text-anchor="middle">✓ TRADER VERIFIED</text>
+  </g>
+</svg>

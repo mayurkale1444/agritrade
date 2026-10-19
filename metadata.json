@@ -1,0 +1,6 @@
+{
+  "name": "AgriTrade",
+  "description": "Know Before You Sell. Independent agricultural mandi intelligence platform with government records sourced from AGMARKNET and data.gov.in, trader-reported spot rates, and produce valuation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

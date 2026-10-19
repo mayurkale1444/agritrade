@@ -1,0 +1,20 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="256" cy="256" r="256" fill="#14532D"/>
+  <g transform="translate(64, 64) scale(0.768)">
+    <circle cx="250" cy="250" r="230" stroke="#FFFFFF" stroke-width="24" fill="#FFFFFF"/>
+    <defs>
+      <clipPath id="psCircleSingleClip">
+        <circle cx="250" cy="250" r="218" />
+      </clipPath>
+    </defs>
+    <g clip-path="url(#psCircleSingleClip)">
+      <path d="M250 105C250 105 195 192 195 264C195 295 214 315 250 315C286 315 305 295 305 264C305 192 250 105 250 105Z" fill="#166534"/>
+      <path d="M248 170C232 202 226 242 248 305C238 288 232 248 248 170Z" fill="#FFFFFF"/>
+      <path d="M95 224C135 238 186 268 204 340C170 340 140 318 95 224Z" fill="#166534"/>
+      <path d="M405 224C365 238 314 268 296 340C330 340 360 318 405 224Z" fill="#166534"/>
+      <path d="M112 372C148 348 230 318 382 334C330 342 198 376 138 416L112 372Z" fill="#4ADE80"/>
+      <path d="M150 418C210 378 300 348 396 338C370 348 260 395 204 444L150 418Z" fill="#22C55E"/>
+      <path d="M220 448C274 402 362 354 402 340C400 392 348 456 270 472L220 448Z" fill="#166534"/>
+    </g>
+  </g>
+</svg>

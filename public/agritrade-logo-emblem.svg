@@ -1,0 +1,56 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer Circular Ring Border -->
+  <circle cx="250" cy="250" r="230" stroke="#166534" stroke-width="26" fill="#FFFFFF"/>
+
+  <!-- Clip path to keep field furrows neatly inside the circular ring -->
+  <defs>
+    <clipPath id="innerCircleClip">
+      <circle cx="250" cy="250" r="217" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#innerCircleClip)">
+    <!-- THREE EMBLEMATIC LEAVES -->
+    <!-- Center Leaf (Dominant, pointed upright with distinctive white vein carve) -->
+    <path
+      d="M250 108C250 108 196 195 196 265C196 295 214 315 250 315C286 315 304 295 304 265C304 195 250 108 250 108Z"
+      fill="#166534"
+    />
+    <!-- Center Leaf Inner Curved Vein (Clean White Negative Space) -->
+    <path
+      d="M248 175C232 205 226 242 248 305C238 290 234 250 248 175Z"
+      fill="#FFFFFF"
+    />
+
+    <!-- Left Tilted Leaf -->
+    <path
+      d="M100 225C138 240 188 270 205 342C172 342 142 320 100 225Z"
+      fill="#166534"
+    />
+
+    <!-- Right Tilted Leaf -->
+    <path
+      d="M400 225C362 240 312 270 295 342C328 342 358 320 400 225Z"
+      fill="#166534"
+    />
+
+    <!-- AGRICULTURAL FIELD FURROWS (Sweeping across bottom section) -->
+    <!-- Upper Vibrant Field Band (Fresh Green) -->
+    <path
+      d="M115 372C150 348 230 320 380 335C330 342 200 375 140 415L115 372Z"
+      fill="#4ADE80"
+    />
+
+    <!-- Middle Field Band -->
+    <path
+      d="M152 418C210 378 300 348 395 338C370 348 260 395 205 442L152 418Z"
+      fill="#22C55E"
+    />
+
+    <!-- Lower Deep Agricultural Furrow (Lush Forest Green) -->
+    <path
+      d="M222 447C275 402 360 355 400 340C400 390 350 455 272 472L222 447Z"
+      fill="#166534"
+    />
+  </g>
+</svg>

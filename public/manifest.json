@@ -1,0 +1,23 @@
+{
+  "short_name": "AgriTrade",
+  "name": "AgriTrade — Know Before You Sell",
+  "description": "Know Before You Sell. Independent agricultural mandi intelligence platform with government records sourced from AGMARKNET & data.gov.in, trader reports, and trade valuation.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "48x48 72x72 96x96 128x128 192x192 256x256 512x512"
+    },
+    {
+      "src": "/playstore-icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#14532D",
+  "theme_color": "#14532D",
+  "display": "standalone",
+  "orientation": "portrait"
+}
