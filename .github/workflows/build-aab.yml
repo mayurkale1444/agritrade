@@ -31,6 +31,7 @@ jobs:
       - name: Create release keystore
         run: |
           mkdir -p android/keystore
+          mkdir -p android/app
           keytool -genkeypair -v \
             -keystore android/keystore/agritrade-release.keystore \
             -alias agritrade \
@@ -40,6 +41,7 @@ jobs:
             -storepass agritrade2026 \
             -keypass agritrade2026 \
             -dname "CN=AgriTrade, OU=Mobile, O=AgriTrade, L=Pune, S=Maharashtra, C=IN"
+          cp android/keystore/agritrade-release.keystore android/app/agritrade-release.keystore
 
       - name: Ensure Gradle Wrapper exists
         run: |
@@ -63,9 +65,9 @@ jobs:
           RELEASE_KEY_PASSWORD: agritrade2026
           MYAPP_RELEASE_STORE_PASSWORD: agritrade2026
           MYAPP_RELEASE_KEY_PASSWORD: agritrade2026
-          MYAPP_UPLOAD_STORE_PASSWORD: agritrade2026
-          MYAPP_UPLOAD_KEY_PASSWORD: agritrade2026
-        run: ./gradlew bundleRelease -Pandroid.injected.signing.store.file=../android/keystore/agritrade-release.keystore -Pandroid.injected.signing.store.password=agritrade2026 -Pandroid.injected.signing.key.alias=agritrade -Pandroid.injected.signing.key.password=agritrade2026
+          KEYSTORE_FILE: ${{ github.workspace }}/android/keystore/agritrade-release.keystore
+          RELEASE_STORE_FILE: ${{ github.workspace }}/android/keystore/agritrade-release.keystore
+        run: ./gradlew bundleRelease
 
       - name: Upload AAB
         uses: actions/upload-artifact@v4
