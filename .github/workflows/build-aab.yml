@@ -9,6 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    # REPLACE 'agritrade' WITH YOUR EXACT SUBFOLDER NAME
+    # If the subfolder is 'app', change this to: working-directory: app
+    defaults:
+      run:
+        working-directory: agritrade
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -22,7 +28,6 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.x' # Set to your project Flutter version
           channel: 'stable'
           cache: true
 
@@ -49,4 +54,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-release-v4
-          path: build/app/outputs/bundle/release/app-release.aab
+          # Update path with the same subfolder name:
+          path: agritrade/build/app/outputs/bundle/release/app-release.aab
