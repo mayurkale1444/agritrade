@@ -8,7 +8,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowInsetsController;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
@@ -28,35 +27,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // 1. Configure Status Bar with matching background and dark readable icons
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            getWindow().setStatusBarColor(Color.parseColor("#F8FAFC")); // matches bg-slate-50
-            WindowInsetsController controller = getWindow().getInsetsController();
-            if (controller != null) {
-                controller.setSystemBarsAppearance(
-                    WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
-                    WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
-                );
-            }
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        // Safe Status Bar styling for Android M+ (6.0 to 14+) without risky controller calls
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             getWindow().setStatusBarColor(Color.parseColor("#F8FAFC"));
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+            View decorView = getWindow().getDecorView();
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
 
-        // 2. Initialize WebView
-        webView = new WebView(this);
-
-        // 3. Wrap WebView in a container that strictly respects status bar and camera notch boundaries
+        // Create container layout with system windows padding
         FrameLayout rootLayout = new FrameLayout(this);
         rootLayout.setFitsSystemWindows(true);
         rootLayout.setBackgroundColor(Color.parseColor("#F8FAFC"));
+
+        webView = new WebView(this);
         rootLayout.addView(webView, new FrameLayout.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.MATCH_PARENT
         ));
         setContentView(rootLayout);
 
-        // 4. Configure WebSettings
+        // Configure WebSettings
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);
@@ -72,12 +62,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 String url = request.getUrl().toString();
-                if (url.startsWith("https://mayurkale1444.github.io") || url.startsWith("http://localhost") || url.startsWith("file://")) {
+
+                // Keep all internal AgriTrade GitHub Pages routes inside the WebView
+                if (url.startsWith("https://mayurkale1444.github.io") || 
+                    url.startsWith("http://localhost") || 
+                    url.startsWith("file://")) {
                     return false;
                 }
 
+                // Safely delegate external links without crashing if no handler exists
                 try {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                 } catch (Exception ignored) {}
                 return true;
@@ -89,11 +85,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // 5. Predictive back navigation
+        // Predictive back navigation
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                if (webView.canGoBack()) {
+                if (webView != null && webView.canGoBack()) {
                     webView.goBack();
                 } else {
                     setEnabled(false);
@@ -102,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // 6. Handle Intent / Deep Linking
+        // Deep linking & URL loading
         Intent intent = getIntent();
         Uri data = intent != null ? intent.getData() : null;
         if (data != null) {
@@ -110,5 +106,13 @@ public class MainActivity extends AppCompatActivity {
         } else {
             webView.loadUrl(DEFAULT_URL);
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (webView != null) {
+            webView.destroy();
+        }
+        super.onDestroy();
     }
 }
