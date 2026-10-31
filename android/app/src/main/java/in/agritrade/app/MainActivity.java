@@ -2,15 +2,19 @@ package in.agritrade.app;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowInsetsController;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.FrameLayout;
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,9 +28,35 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        webView = new WebView(this);
-        setContentView(webView);
+        // 1. Configure Status Bar with matching background and dark readable icons
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            getWindow().setStatusBarColor(Color.parseColor("#F8FAFC")); // matches bg-slate-50
+            WindowInsetsController controller = getWindow().getInsetsController();
+            if (controller != null) {
+                controller.setSystemBarsAppearance(
+                    WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
+                    WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
+                );
+            }
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            getWindow().setStatusBarColor(Color.parseColor("#F8FAFC"));
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        }
 
+        // 2. Initialize WebView
+        webView = new WebView(this);
+
+        // 3. Wrap WebView in a container that strictly respects status bar and camera notch boundaries
+        FrameLayout rootLayout = new FrameLayout(this);
+        rootLayout.setFitsSystemWindows(true);
+        rootLayout.setBackgroundColor(Color.parseColor("#F8FAFC"));
+        rootLayout.addView(webView, new FrameLayout.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.MATCH_PARENT
+        ));
+        setContentView(rootLayout);
+
+        // 4. Configure WebSettings
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);
@@ -46,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
                     return false;
                 }
 
-                // Open external links (e.g., AGMARKNET, Play Store, Instagram) in external browser
                 try {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                     startActivity(intent);
@@ -60,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Predictive back navigation
+        // 5. Predictive back navigation
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
@@ -73,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Handle Deep Linking
+        // 6. Handle Intent / Deep Linking
         Intent intent = getIntent();
         Uri data = intent != null ? intent.getData() : null;
         if (data != null) {
