@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     private WebView webView;
-    private static final String DEFAULT_URL = "https://agritrade.in";
+    private static final String DEFAULT_URL = "https://mayurkale1444.github.io/agritrade/";
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 String url = request.getUrl().toString();
-                if (url.startsWith("https://agritrade.in") || url.startsWith("http://localhost")) {
+                if (url.startsWith("https://mayurkale1444.github.io/agritrade/") || url.startsWith("http://localhost")) {
                     return false;
                 }
                 // Open external links (e.g. AGMARKNET portal, Play Store, Instagram) in external browser
