@@ -44,7 +44,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data
                     android:scheme="https"
-                    android:host="agritrade.in" />
+                    android:host="mayurkale1444.github.io" />
             </intent-filter>
 
             <!-- Play Store Compliant Deletion Deep Link -->
@@ -54,7 +54,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data
                     android:scheme="https"
-                    android:host="agritrade.in"
+                    android:host="mayurkale1444.github.io"
                     android:pathPrefix="/delete-account" />
             </intent-filter>
         </activity>
