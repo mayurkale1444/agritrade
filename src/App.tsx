@@ -99,6 +99,7 @@ export default function App() {
       return (
         window.location.pathname === '/disclaimer' ||
         window.location.pathname.startsWith('/disclaimer') ||
+        window.location.pathname.includes('/disclaimer') ||
         window.location.search.includes('view=disclaimer') ||
         window.location.hash === '#disclaimer'
       );
@@ -112,19 +113,21 @@ export default function App() {
   const isPublicDeleteAccountRoute = typeof window !== 'undefined' && (
     window.location.pathname === '/delete-account' ||
     window.location.pathname.startsWith('/delete-account') ||
+    window.location.pathname.includes('/delete-account') ||
     window.location.search.includes('page=delete-account') ||
     window.location.hash === '#delete-account'
   );
 
   const isInitialWebsiteRoute = typeof window !== 'undefined' && (
     window.location.pathname === '/website' ||
+    window.location.pathname.includes('/website') ||
     window.location.search.includes('view=website') ||
     window.location.hash === '#website'
   );
 
   const [isShowingWebsite, setIsShowingWebsite] = useState<boolean>(isInitialWebsiteRoute);
 
-  // Initial view: Open Welcome Page on startup (Fresh install, Close/reopen, and Logout all start at Welcome)
+  // Initial view: Open Welcome Page on startup
   const [currentView, setCurrentView] = useState<AppView>(() => {
     try {
       if (typeof window !== 'undefined') {
@@ -192,7 +195,6 @@ export default function App() {
       date: 'Today'
     });
 
-    // Requirement 8: Immediately clear previous stale data while new query loads
     const cmdObj = COMMODITIES.find(c => c.id === commodityId) || COMMODITIES[0];
     setMarketData({
       commodity: cmdObj,
@@ -330,18 +332,14 @@ export default function App() {
 
   // Handle "Continue without login": open Home dashboard directly using saved profile
   const handleContinueWithoutLogin = () => {
-    // If no completed profile is saved on device (fresh user or after profile deletion),
-    // route to Profile Questions (onboarding), do NOT restore previous preferences!
     if (!hasSavedUserProfile()) {
       setCurrentView('onboarding');
       return;
     }
 
-    // Returning user with saved profile: open Home dashboard directly using saved profile
     const saved = getStoredUserProfile();
     setUserProfile(saved);
 
-    // Refresh active commodity and mandi from the saved profile
     const activeCmd = saved.primaryCommodity || saved.commoditiesHandled?.[0] || 'wheat';
     setSelectedCommodityId(activeCmd);
     activeCommodityRef.current = activeCmd;
@@ -367,13 +365,10 @@ export default function App() {
 
   // Handle completion of welcome / "Get Started"
   const handleGetStarted = () => {
-    // If a completed profile is already saved on this device, do NOT show profile questions again; open Home directly!
     if (hasSavedUserProfile()) {
       handleContinueWithoutLogin();
       return;
     }
-
-    // First-time user without saved profile: start profile questions directly
     setCurrentView('onboarding');
   };
 
@@ -391,7 +386,7 @@ export default function App() {
     }
   };
 
-  // Commodity selection handler (Keeps current selected mandi)
+  // Commodity selection handler
   const handleSelectCommodity = (id: CommodityId) => {
     console.log('[SEARCH SELECTION]', {
       type: 'commodity',
@@ -519,7 +514,6 @@ export default function App() {
   // Authentication: Logout handler
   const handleLogout = async () => {
     await authLogout();
-    // Retain saved profile on device; return to Welcome Page
     setCurrentView('welcome');
   };
 
@@ -609,7 +603,7 @@ export default function App() {
         />
       )}
 
-      {/* 1B. TRADER ONBOARDING (5-Step Personalization) */}
+      {/* 1B. TRADER ONBOARDING */}
       {currentView === 'onboarding' && (
         <TraderOnboarding
           language={currentLanguage}
@@ -1021,7 +1015,7 @@ export default function App() {
           language={currentLanguage}
           userProfile={userProfile}
           onNavigateToEditProfile={() => {
-            setCurrentView('edit-profile');
+            setCurrentView('edit_profile');
           }}
           onBack={() => {
             setCurrentView('home');
@@ -1155,7 +1149,7 @@ export default function App() {
         />
       )}
 
-      {/* MODAL: Data Sources & Legal Disclaimer (Google Play Compliance) */}
+      {/* MODAL: Data Sources & Legal Disclaimer */}
       <DataSourcesDisclaimerModal
         isOpen={isDisclaimerModalOpen}
         onClose={() => setIsDisclaimerModalOpen(false)}
