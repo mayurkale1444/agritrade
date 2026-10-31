@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         settings.setDomStorageEnabled(true);
         settings.setDatabaseEnabled(true);
         settings.setCacheMode(WebSettings.LOAD_DEFAULT);
-        settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
+        settings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         settings.setSupportZoom(false);
         settings.setBuiltInZoomControls(false);
         settings.setUserAgentString(settings.getUserAgentString() + " AgriTradeApp/1.0.0");
@@ -42,17 +42,25 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 String url = request.getUrl().toString();
-                if (url.startsWith("https://mayurkale1444.github.io/agritrade/") || url.startsWith("http://localhost")) {
+                if (url.startsWith("https://mayurkale1444.github.io") || url.startsWith("http://localhost") || url.startsWith("file://")) {
                     return false;
                 }
-                // Open external links (e.g. AGMARKNET portal, Play Store, Instagram) in external browser
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                startActivity(intent);
+
+                // Open external links (e.g., AGMARKNET, Play Store, Instagram) in external browser
+                try {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(intent);
+                } catch (Exception ignored) {}
                 return true;
+            }
+
+            @Override
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                super.onReceivedError(view, errorCode, description, failingUrl);
             }
         });
 
-        // Android 13+ / 14+ / 16+ Predictive Back Navigation
+        // Predictive back navigation
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
